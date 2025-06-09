@@ -1,8 +1,8 @@
 
-@import url("../css/font-awesome/css/font-awesome.min.css");
-@import url("../css/micons/micons.css");
-@import url("../css/fonts.css");
-@import url("../css/base.css");
+@import url("../../public/css/font-awesome/css/font-awesome.min.css");
+@import url("../../public/css/micons/micons.css");
+@import url("../../public/css/fonts.css");
+@import url("../../public/css/base.css");
 
 html {
 	font-size: 10px;
@@ -1316,11 +1316,11 @@ input::-moz-focus-inner {
 }
 
 #featured-post-slider .flex-direction-nav li a.flex-prev {
-	background-image: url(../images/arrow-left.png);
+	background-image: url(../../public/images/arrow-left.png);
 }
 
 #featured-post-slider .flex-direction-nav li a.flex-next {
-	background-image: url(../images/arrow-right.png);
+	background-image: url(../../public/images/arrow-right.png);
 }
 
 #featured-post-slider .flex-direction-nav li a:hover {
@@ -1523,7 +1523,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 header {
 	width: 100%;
-	background: #DBDBDB url(../images/escheresque_@2X.png) repeat;
+	background: #DBDBDB url(../../public/images/escheresque_@2X.png) repeat;
 	background-size: 46px 29px;
 	height: 130px;
 	border-bottom: 1px solid #E5E5E5;
@@ -1566,7 +1566,7 @@ header .logo a {
 	border: none;
 	width: 60px;
 	height: 60px;
-	background: url("../images/logo.png") no-repeat center;
+	background: url("../../public/images/logo.png") no-repeat center;
 	background-size: 60px 60px;
 	font: 0/0 a;
 	text-shadow: none;
@@ -1755,6 +1755,10 @@ header .logo a {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.sfHover > ul {
+	display: block;
+}
+
+.main-navigation .has-children:hover > .sub-menu {
 	display: block;
 }
 
@@ -3054,25 +3058,25 @@ footer ul li {
 
 .format-audio .mejs-controls .mejs-button button,
 .format-audio .no-svg .mejs-controls .mejs-button button {
-	background: transparent url("../images/mejs/play.png") no-repeat center;
+	background: transparent url("../../public/images/mejs/play.png") no-repeat center;
 	background-size: 14px;
 }
 
 .format-audio .mejs-controls .mejs-pause button,
 .format-audio .no-svg .mejs-controls .mejs-pause button {
-	background: transparent url("../images/mejs/pause.png") no-repeat center;
+	background: transparent url("../../public/images/mejs/pause.png") no-repeat center;
 	background-size: 14px;
 }
 
 .format-audio .mejs-controls .mejs-mute button,
 .format-audio .no-svg .mejs-controls .mejs-mute button {
-	background: transparent url("../images/mejs/speaker-on.png") no-repeat center;
+	background: transparent url("../../public/images/mejs/speaker-on.png") no-repeat center;
 	background-size: 16px;
 }
 
 .format-audio .mejs-controls .mejs-unmute button,
 .format-audio .no-svg .mejs-controls .mejs-unmute button {
-	background: transparent url("../images/mejs/speaker-mute.png") no-repeat center;
+	background: transparent url("../../public/images/mejs/speaker-mute.png") no-repeat center;
 	background-size: 16px;
 }
 

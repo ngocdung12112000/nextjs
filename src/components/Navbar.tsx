@@ -55,7 +55,7 @@ export default function Navbar() {
 							</ul>
 						</li>
 						<li className="has-children">
-							<Link href="/" title="">Blog</Link>
+							<Link href="/blog" title="">Blog</Link>
 							<ul className="sub-menu">
 								<li><Link href="/">Video Post</Link></li>
 								<li><Link href="/">Audio Post</Link></li>
@@ -63,9 +63,9 @@ export default function Navbar() {
 								<li><Link href="/">Standard Post</Link></li>
 							</ul>
 						</li>
-						<li><Link href="/" title="">Styles</Link></li>
+						<li><Link href="/styles" title="">Styles</Link></li>
 						<li><Link href="/about" title="">About</Link></li>
-						<li><Link href="/" title="">Contact</Link></li>
+						<li><Link href="/contact" title="">Contact</Link></li>
 					</ul>
 				</nav>
 				<div className="search-wrap">

@@ -3,7 +3,7 @@ export default function Home() {
     <section id="bricks">
 
       <div className="row masonry">
-        <div className="bricks-wrapper" style={{ position: "relative"}}>
+        <div className="bricks-wrapper" style={{ position: "relative", height: "2788px"}}>
 
           <div className="grid-sizer"></div>
 

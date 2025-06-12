@@ -1,9 +1,11 @@
 'use client';
 import Link from 'next/link';
 import React from 'react';
+import { signOut } from "next-auth/react";
 
 export default function Navbar() {
 	const [searchValue, setSearchValue] = React.useState('');
+
 
 	React.useEffect(() => {
 		const searchTrigger = document.querySelector('.search-trigger');
@@ -67,6 +69,13 @@ export default function Navbar() {
 						<li><Link href="/about" title="">About</Link></li>
 						<li><Link href="/contact" title="">Contact</Link></li>
 					</ul>
+					<div>
+						<button
+							onClick={() => signOut()}
+						>
+							Sign Out
+						</button>
+					</div>
 				</nav>
 				<div className="search-wrap">
 					<form role="search" method="get" className="search-form" action="#">
@@ -91,6 +100,7 @@ export default function Navbar() {
 					<a className="menu-toggle" href="#"><span>Menu</span></a>
 				</div>
 			</div>
+			
 		</header>
 	);
 }

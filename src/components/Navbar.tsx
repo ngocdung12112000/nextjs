@@ -4,8 +4,13 @@ import React from 'react';
 import { signOut } from "next-auth/react";
 
 export default function Navbar() {
-	const [searchValue, setSearchValue] = React.useState('');
+	// if login page, hide the navbar
 
+	if (typeof window !== 'undefined' && window.location.pathname === '/login') {
+		return null;
+	}
+
+	const [searchValue, setSearchValue] = React.useState('');
 
 	React.useEffect(() => {
 		const searchTrigger = document.querySelector('.search-trigger');
@@ -25,7 +30,6 @@ export default function Navbar() {
 				}
 			})
 		}
-
 
 		// Cleanup event listener on component unmount
 		return () => {
@@ -59,23 +63,23 @@ export default function Navbar() {
 						<li className="has-children">
 							<Link href="/blog" title="">Blog</Link>
 							<ul className="sub-menu">
-								<li><Link href="/">Video Post</Link></li>
-								<li><Link href="/">Audio Post</Link></li>
-								<li><Link href="/">Gallery Post</Link></li>
-								<li><Link href="/">Standard Post</Link></li>
+								<li><Link href="/blog/video-post">Video Post</Link></li>
+								<li><Link href="/blog/audio-post">Audio Post</Link></li>
+								<li><Link href="/blog/gallery-post">Gallery Post</Link></li>
+								<li><Link href="/blog/standard-post">Standard Post</Link></li>
 							</ul>
 						</li>
 						<li><Link href="/styles" title="">Styles</Link></li>
 						<li><Link href="/about" title="">About</Link></li>
 						<li><Link href="/contact" title="">Contact</Link></li>
 					</ul>
-					<div>
+					{/* <div>
 						<button
 							onClick={() => signOut()}
 						>
 							Sign Out
 						</button>
-					</div>
+					</div> */}
 				</nav>
 				<div className="search-wrap">
 					<form role="search" method="get" className="search-form" action="#">

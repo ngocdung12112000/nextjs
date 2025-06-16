@@ -291,7 +291,6 @@ export default function Home() {
 
           </article> 
 
-
           <article className="brick entry animate-this" style={{ position: "absolute", top: "1490px", left: "50%" }}>
 
             <div className="entry-thumb">
@@ -348,7 +347,7 @@ export default function Home() {
 
           </article> 
 
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "1778px", left: "0%" }}>
+          <article className="brick entry animate-this" style={{ position: "absolute", top: "1850px", left: "0%" }}>
 
             <div className="entry-thumb">
               <a href="single-standard.html" className="thumb-link">

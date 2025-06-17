@@ -4,12 +4,6 @@ import React from 'react';
 import { signOut } from "next-auth/react";
 
 export default function Navbar() {
-	// if login page, hide the navbar
-
-	if (typeof window !== 'undefined' && window.location.pathname === '/login') {
-		return null;
-	}
-
 	const [searchValue, setSearchValue] = React.useState('');
 
 	React.useEffect(() => {

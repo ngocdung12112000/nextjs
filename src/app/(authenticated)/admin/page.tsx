@@ -2,27 +2,12 @@
 import Button from "@/src/components/Button";
 import { useState, useEffect } from "react";
 import { redirect } from 'next/navigation';
-
-const dummyBlogs = [
-  {
-    id: 1,
-    image: "https://via.placeholder.com/100",
-    title: "First Blog",
-    description: "This is the first blog post.",
-    category: "Tech",
-  },
-  {
-    id: 2,
-    image: "https://via.placeholder.com/100",
-    title: "Second Blog",
-    description: "This is the second blog post.",
-    category: "Lifestyle",
-  },
-];
+import { blogs as blogDatas } from "@/src/data/db";
 
 type Blog = {
   id: number;
   image: string;
+  imageLink?: string; // Optional for create case
   title: string;
   description: string;
   category: string;
@@ -33,7 +18,7 @@ export default function Admin() {
 
   useEffect(() => {
     // Replace with real API call
-    setBlogs(dummyBlogs);
+    setBlogs(blogDatas);
   }, []);
 
   const handleEditClick = (blog: Blog) => {

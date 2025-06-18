@@ -3,7 +3,7 @@ export default function Home() {
     <section id="bricks">
 
       <div className="row masonry">
-        <div className="bricks-wrapper" style={{ position: "relative", height: "2788px"}}>
+        <div className="bricks-wrapper" style={{ position: "relative", height: "2500px"}}>
 
           <div className="grid-sizer"></div>
 
@@ -36,59 +36,6 @@ export default function Home() {
 
                     </div>
                   </li>
-
-                  <li>
-                    <div className="featured-post-slide">
-
-                      <div
-                        className="post-background"
-                        style={{ backgroundImage: "url('../images/thumbs/featured/featured-2.jpg')" }}
-                      ></div>
-
-                      <div className="overlay"></div>
-
-                      <div className="post-content">
-                        <ul className="entry-meta">
-                          <li>August 29, 2016</li>
-                          <li><a href="#" title="Author Profile">Sasuke Uchiha</a></li>
-                        </ul>
-
-                        <h1 className="slide-title">
-                          <a href="single-standard.html" title="Enhancing Your Designs with Negative Space">
-                            Enhancing Your Designs with Negative Space
-                          </a>
-                        </h1>
-                      </div>
-
-                    </div>
-                  </li>
-
-                  <li>
-                    <div className="featured-post-slide">
-
-                      <div
-                        className="post-background"
-                        style={{ backgroundImage: "url('images/thumbs/featured/featured-3.jpg')" }}
-                      ></div>
-
-                      <div className="overlay"></div>
-
-                      <div className="post-content">
-                        <ul className="entry-meta">
-                          <li>August 27, 2016</li>
-                          <li><a href="#" title="Author Profile">Naruto Uzumaki</a></li>
-                        </ul>
-
-                        <h1 className="slide-title">
-                          <a href="single-standard.html" title="Music Album Cover Designs for Inspiration">
-                            Music Album Cover Designs for Inspiration
-                          </a>
-                        </h1>
-                      </div>
-
-                    </div>
-                  </li>
-
                 </ul>
               </div>
             </div>
@@ -158,10 +105,6 @@ export default function Home() {
               <a href="single-audio.html" className="thumb-link">
                 <img src="images/thumbs/concert.jpg" alt="concert" />
               </a>
-
-              <div className="audio-wrap">
-                <audio id="player" src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" controls></audio>
-              </div>
             </div>
 
             <div className="entry-text">
@@ -183,18 +126,6 @@ export default function Home() {
             </div>
 
           </article>
-
-          <article className="brick entry format-quote animate-this" style={{ position: "absolute", top: "640px", left: "25%" }}>
-
-            <div className="entry-thumb">
-              <blockquote>
-                <p>Good design is making something intelligible and memorable. Great design is making something memorable and meaningful.</p>
-
-                <cite>Dieter Rams</cite>
-              </blockquote>
-            </div>
-
-          </article> 
 
           <article className="brick entry animate-this" style={{ position: "absolute", top: "728px", left: "50%" }}>
 
@@ -252,7 +183,7 @@ export default function Home() {
 
           </article> 
 
-          <article className="brick entry format-gallery group animate-this" style={{ position: "absolute", top: "1054px", left: "25%" }}>
+          <article className="brick entry format-gallery group animate-this" style={{ position: "absolute", top: "640px", left: "25%" }}>
             <div className="entry-thumb">
               <a href="single-standard.html" className="thumb-link">
                 <img src="images/thumbs/gallery/work1.jpg" alt="USAF rocket" />
@@ -273,19 +204,6 @@ export default function Home() {
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
-
-          <article className="brick entry format-link animate-this" style={{ position: "absolute", top: "1414px" }}>
-
-            <div className="entry-thumb">
-              <div className="link-wrap">
-                <p>Looking for affordable &amp; reliable web hosting? We recommend Dreamhost.</p>
-                <cite>
-                  <a target="_blank" href="http://www.dreamhost.com/r.cgi?287326">http://www.dreamhost.com</a>
-                </cite>
               </div>
             </div>
 
@@ -347,7 +265,7 @@ export default function Home() {
 
           </article> 
 
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "1850px", left: "0%" }}>
+          <article className="brick entry animate-this" style={{ position: "absolute", top: "1410px", left: "0%" }}>
 
             <div className="entry-thumb">
               <a href="single-standard.html" className="thumb-link">
@@ -375,7 +293,7 @@ export default function Home() {
 
           </article>
 
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "1920px", left: "25%" }}>
+          <article className="brick entry animate-this" style={{ position: "absolute", top: "1490px", left: "25%" }}>
 
             <div className="entry-thumb">
               <a href="single-standard.html" className="thumb-link">

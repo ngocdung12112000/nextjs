@@ -78,10 +78,6 @@ export default function Category() {
                 <a href="single-audio.html" className="thumb-link">
                   <img src="images/thumbs/concert.jpg" alt="concert"/>
                 </a>
-
-                <div className="audio-wrap">
-                  <audio id="player2" src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" controls></audio>
-                </div>
               </div>
 
               <div className="entry-text">
@@ -100,18 +96,6 @@ export default function Category() {
                 <div className="entry-excerpt">
                   Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
                 </div>
-              </div>
-
-            </article> 
-
-            <article className="brick entry format-quote animate-this">
-
-              <div className="entry-thumb">
-                <blockquote>
-                  <p>Good design is making something intelligible and memorable. Great design is making something memorable and meaningful.</p>
-
-                  <cite>Dieter Rams</cite>
-                </blockquote>
               </div>
 
             </article> 
@@ -198,20 +182,7 @@ export default function Category() {
 
             </article> 
 
-            <article className="brick entry format-link animate-this" style={{position: 'absolute', left: '25%', top: '789px'}}>
-
-              <div className="entry-thumb">
-                <div className="link-wrap">
-                  <p>Looking for affordable &amp; reliable web hosting? We recommend Dreamhost.</p>
-                  <cite>
-                    <a target="_blank" href="http://www.dreamhost.com/r.cgi?287326">http://www.dreamhost.com</a>
-                  </cite>
-                </div>
-              </div>
-
-            </article> 
-
-            <article className="brick entry animate-this" style={{position: 'absolute', left: '25%', top: '1208px'}}>
+            <article className="brick entry animate-this" style={{position: 'absolute', left: '25%', top: '800px'}}>
 
               <div className="entry-thumb">
                 <a href="single-standard.html" className="thumb-link">
@@ -239,7 +210,7 @@ export default function Category() {
 
             </article> 
 
-            <article className="brick entry format-video animate-this" style={{position: 'absolute', left: '75%', top: '1236px'}}>
+            <article className="brick entry format-video animate-this" style={{position: 'absolute', left: '75%', top: '770px'}}>
 
               <div className="entry-thumb video-image">
                 <a href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39" data-lity>

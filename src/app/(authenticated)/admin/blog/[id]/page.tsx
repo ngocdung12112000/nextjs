@@ -1,6 +1,7 @@
 'use client'
 import { redirect, useParams } from 'next/navigation';
 import { useEffect, useState } from "react";
+import { blogs } from '@/src/data/db';
 
 interface Blog {
     id: number;
@@ -24,17 +25,11 @@ const BlogDetailsPage = () => {
     });
 
     useEffect(() => {
-        if (id && id !== "create") {
+        if (id && typeof id === "string" && id !== "create") {
             // Fetch blog data from API (simulate for now)
-            const fetchedBlog: Blog = {
-                id: Number(id),
-                image: "featured-1.jpg",
-                imageLink: '/images/thumbs/featured/featured-1.jpg',
-                title: "Sample Blog",
-                description: "Sample description of blog post",
-                category: "Tech",
-            };
-            setBlog(fetchedBlog);
+            const blogId = parseInt(id, 10);
+            const fetchedBlog = blogs.find((b) => b.id === blogId);
+            if (fetchedBlog) setBlog(fetchedBlog);
         }
     }, [id]);
 
@@ -51,16 +46,19 @@ const BlogDetailsPage = () => {
         const file = e.target.files?.[0];
         if (!file) return;
 
+        console.log("Uploading image:", file.name);
+
         const reader = new FileReader();
         reader.onloadend = () => {
-            setBlog((prev) => ({ ...prev, image: reader.result as string, imageLink: reader.result as string }));
+            setBlog((prev) => ({ ...prev, image: file.name as string, imageLink: reader.result as string }));
         };
+
         reader.readAsDataURL(file);
     };
 
     return (
         <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
-            <h1 >Edit Blog</h1>
+            <h1 >{id !== "create" ? 'Edit' : 'Create'} Blog</h1>
             <div >
                 <div>
                     <label htmlFor="uploadImage" className="block font-medium">Upload Image</label>

@@ -2,7 +2,7 @@
 import Button from "@/src/components/Button";
 import { useState, useEffect } from "react";
 import { redirect } from 'next/navigation';
-import { blogs as blogDatas } from "@/src/data/db";
+import datablogs from "@/src/data/db.json";
 
 type Blog = {
   id: number;
@@ -18,7 +18,7 @@ export default function Admin() {
 
   useEffect(() => {
     // Replace with real API call
-    setBlogs(blogDatas);
+    setBlogs(datablogs);
   }, []);
 
   const handleEditClick = (blog: Blog) => {

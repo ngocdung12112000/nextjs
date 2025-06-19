@@ -1,7 +1,7 @@
 'use client'
 import { redirect, useParams } from 'next/navigation';
 import { useEffect, useState } from "react";
-import { blogs } from '@/src/data/db';
+import datablogs from "@/src/data/db.json";
 
 interface Blog {
     id: number;
@@ -28,7 +28,7 @@ const BlogDetailsPage = () => {
         if (id && typeof id === "string" && id !== "create") {
             // Fetch blog data from API (simulate for now)
             const blogId = parseInt(id, 10);
-            const fetchedBlog = blogs.find((b) => b.id === blogId);
+            const fetchedBlog = datablogs.find((b) => b.id === blogId);
             if (fetchedBlog) setBlog(fetchedBlog);
         }
     }, [id]);
@@ -40,6 +40,7 @@ const BlogDetailsPage = () => {
 
     const handleSave = () => {
         console.log("Saving blog:", blog);
+
     };
 
     const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,6 +55,8 @@ const BlogDetailsPage = () => {
         };
 
         reader.readAsDataURL(file);
+
+        
     };
 
     return (

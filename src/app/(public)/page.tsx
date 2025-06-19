@@ -1,4 +1,27 @@
+import datablogs from "@/src/data/db.json";
+
+const positionStyles: Record<number, { top: string, left: string }> = {
+  0: { top: "0px", left: "50%" },
+  1: { top: "0px", left: "75%" },
+  2: { top: "640px", left: "0%" },
+  3: { top: "640px", left: "25%" },
+  4: { top: "728px", left: "50%" },
+  5: { top: "800px", left: "75%" },
+  6: { top: "1410px", left: "0%" },
+  7: { top: "1430px", left: "25%" },
+  8: { top: "1605px", left: "50%" },
+  9: { top: "1673px", left: "75%" },
+  10: { top: "1673px", left: "00%" },
+  11: { top: "1673px", left: "25%" },
+  12: { top: "1673px", left: "50%" },
+  13: { top: "1673px", left: "75%" },
+}
+
 export default function Home() {
+  
+  
+  console.log('blogsData', datablogs);
+
   return (
     <section id="bricks">
 
@@ -41,285 +64,28 @@ export default function Home() {
             </div>
           </div>
 
-          <article className="brick entry format-standard animate-this">
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="../images/thumbs/diagonal-building.jpg" alt="Diagonal Building" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#" title="Design Category">Design</a>
-                    <a href="#" title="Photography Category">Photography</a>
-                  </span>
+          {datablogs && datablogs.map((blog, index) => (
+            <article key={index} className="brick entry format-standard animate-this" style={{position: 'absolute', left: `${positionStyles[index].left}`, top: `${positionStyles[index]?.top || '0px'}`}}>
+              <div className="entry-thumb">
+                <a href="single-standard.html" className="thumb-link">
+                  <img src={blog.imageLink} alt={blog.title} />
+                </a>
+              </div>
+              <div className="entry-text">
+                <div className="entry-header">
+                  <div className="entry-meta">
+                    <span className="cat-links">
+                      <a href="#">{blog.category}</a>
+                    </span>
+                  </div>
+                  <h1 className="entry-title"><a href="#">{blog.title}</a></h1>
                 </div>
-
-                <h1 className="entry-title">
-                  <a href="single-standard.html" title="Just a Standard Format Post">
-                    Just a Standard Format Post
-                  </a>
-                </h1>
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor
-                nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua
-                cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-          </article>
-
-          <article className="brick entry format-standard animate-this">
-
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="images/thumbs/ferris-wheel.jpg" alt="ferris wheel" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">UI</a>
-                  </span>
+                <div className="entry-excerpt">
+                  {blog.description}
                 </div>
-
-                <h1 className="entry-title"><a href="single-standard.html">This Is Another Standard Format Post.</a></h1>
-
               </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
-
-          <article className="brick entry format-audio animate-this" style={{ position: "absolute", top: "640px" }}>
-
-            <div className="entry-thumb">
-              <a href="single-audio.html" className="thumb-link">
-                <img src="images/thumbs/concert.jpg" alt="concert" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">Music</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-audio.html">This Is a Audio Format Post.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article>
-
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "728px", left: "50%" }}>
-
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="images/thumbs/shutterbug.jpg" alt="Shutterbug" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Photography</a>
-                    <a href="#">html</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-standard.html">Photography Skills Can Improve Your Graphic Design.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
-
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "774px", left: "75%" }}>
-
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="images/thumbs/usaf-rocket.jpg" alt="USAF rocket" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Branding</a>
-                    <a href="#">Mockup</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-standard.html">The 10 Golden Rules of Clean Simple Design.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
-
-          <article className="brick entry format-gallery group animate-this" style={{ position: "absolute", top: "640px", left: "25%" }}>
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="images/thumbs/gallery/work1.jpg" alt="USAF rocket" />
-              </a>
-            </div>
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Branding</a>
-                    <a href="#">Wordpress</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-gallery.html">Workspace Design Trends and Ideas.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
-
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "1490px", left: "50%" }}>
-
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="images/thumbs/diagonal-pattern.jpg" alt="Pattern" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">UI</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-standard.html">You Can See Patterns Everywhere.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
-
-          <article className="brick entry format-video animate-this" style={{ position: "absolute", top: "1673px", left: "75%" }}>
-
-            <div className="entry-thumb video-image">
-              <a href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39" data-lity>
-                <img src="images/thumbs/ottawa-bokeh.jpg" alt="bokeh" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">Branding</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-video.html">This Is a Video Post Format.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
-
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "1410px", left: "0%" }}>
-
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="images/thumbs/lighthouse.jpg" alt="Lighthouse" />
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Photography</a>
-                    <a href="#">Design</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-standard.html">Breathtaking Photos of Lighthouses.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article>
-
-          <article className="brick entry animate-this" style={{ position: "absolute", top: "1490px", left: "25%" }}>
-
-            <div className="entry-thumb">
-              <a href="single-standard.html" className="thumb-link">
-                <img src="images/thumbs/liberty.jpg" alt="Liberty"/>
-              </a>
-            </div>
-
-            <div className="entry-text">
-              <div className="entry-header">
-
-                <div className="entry-meta">
-                  <span className="cat-links">
-                    <a href="#">Branding</a>
-                    <a href="#">html</a>
-                  </span>
-                </div>
-
-                <h1 className="entry-title"><a href="single-standard.html">Designing With Black and White.</a></h1>
-
-              </div>
-              <div className="entry-excerpt">
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-              </div>
-            </div>
-
-          </article> 
+            </article>
+          ))}
 
         </div> 
 
@@ -334,10 +100,6 @@ export default function Home() {
           <a href="#" className="page-numbers">3</a>
           <a href="#" className="page-numbers">4</a>
           <a href="#" className="page-numbers">5</a>
-          <a href="#" className="page-numbers">6</a>
-          <a href="#" className="page-numbers">7</a>
-          <a href="#" className="page-numbers">8</a>
-          <a href="#" className="page-numbers">9</a>
           <a href="#" className="page-numbers next">Next</a>
         </nav>
 
